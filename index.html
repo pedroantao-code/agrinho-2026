@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Sustentável - Agricultura Consciente</title>
+    <style>
+        /* Variáveis de Cores para facilitar a manutenção */
+        :root {
+            --primary-color: #2c5e3b;
+            --secondary-color: #8db600;
+            --dark-color: #2b2b2b;
+            --light-color: #f4f7f4;
+            --white: #ffffff;
+        }
+
+        /* Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho e Navegação */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section (Banner Principal) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin-bottom: 25px;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Seção Sobre */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 { font-size: 32px; }
+            .nav-container { flex-direction: column; gap: 15px; }
+        }
+
+        .about-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .about-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+
+        /* Seção de Dicas (Cards) */
+        .tips-title {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Agro<span>Sustentável</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">O Conceito</a></li>
+                    <li><a href="#dicas">Práticas Verdes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>O Futuro da Agricultura é Consciente</h1>
+        <p>Unindo a produtividade do campo à preservação do nosso planeta. Conheça métodos que alimentam o mundo e protegem o amanhã.</p>
+    </section>
+
+    <main>
+        
+        <section class="about-section" id="sobre">
+            <div>
+                <h2>O que é Agricultura Sustentável?</h2>
+                <p>A agricultura sustentável é um modelo de produção que garante as necessidades alimentares da geração atual sem comprometer a capacidade das gerações futuras de suprir suas próprias necessidades.</p>
+                <br>
+                <p>Ela se baseia em três pilares principais: a <strong>viabilidade econômica</strong>, a <strong>justiça social</strong> e a <strong>salvaguarda ambiental</strong>. Ao adotar essas práticas, diminuímos o impacto da ação humana e mantemos o solo fértil por muito mais tempo.</p>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad451?auto=format&fit=crop&w=600&q=80" alt="Plantação sustentável cuidada por tecnologia humana">
+            </div>
+        </section>
+
+        <hr style="border: 0; height: 1px; background: #ddd; margin-bottom: 60px;">
+
+        <h2 class="tips-title" id="dicas">Dicas de Preservação e Manejo Inteligente</h2>
+        
+        <div class="tips-grid">
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=400&q=80" alt="Rotação de culturas">
+                <div class="card-content">
+                    <h3>Rotação de Culturas</h3>
+                    <p>Alternar as espécies vegetais plantadas em uma mesma área ajuda a quebrar o ciclo de pragas, melhora a fixação de nutrientes naturais e evita a exaustão nutricional do solo.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=400&q=80" alt="Economia de água">
+                <div class="card-content">
+                    <h3>Uso Eficiente da Água</h3>
+                    <p>Sistemas como a irrigação por gotejamento direcionam a água diretamente para as raízes, reduzindo o desperdício por evaporação e economizando até 60% desse recurso vital.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?auto=format&fit=crop&w=400&q=80" alt="Adubação orgânica">
+                <div class="card-content">
+                    <h3>Adubação Orgânica</h3>
+                    <p>Substituir defensivos e fertilizantes químicos por compostagem e adubo orgânico reduz a contaminação dos lençóis freáticos e estimula a vida microbiológica benéfica do solo.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Agro Sustentável - Trabalho Escolar sobre Agricultura Consciente e Meio Ambiente.</p>
+        <p>Desenvolvido com foco em sustentabilidade e tecnologia.</p>
+    </footer>
+
+</body>
+</html>
